@@ -50,7 +50,7 @@ window.onload = function(e) {
                 // itIsNumber = document.getElementById("yourInput").value = this.value;
             }
             //console.log(output);
-            console.log(alreadyChosenButton);
+            console.log(repeatingNumber);
             // for (var i = alreadyChosenButton; i < alreadyChosenButton.length; i++) {
             //     // let chosenButton = x[i].value;
             //     console.log(alreadyChosenButton.length);
@@ -60,7 +60,7 @@ window.onload = function(e) {
             //     return alreadyChosenButton++;
             // }
             // alreadyChosenButton++;
-            return (itIsNumber);
+            return (alreadyChosenButton);
         }
     });
 }
