@@ -3,6 +3,7 @@
 
 <head>
     <title></title>
+    <style src="styleCalc.css" type"txt/style"></style>
     <script src="scriptForCalculations.js"></script>
 </head>
 
@@ -11,12 +12,12 @@
     <div>
     	<div id="Output" type="text" value=""></div><br>
     	<div id="Output2" type="text" value=""></div><br>
-        <input class="InputNumbersanndOperators" id="yourInput" type="number" value="" /><br>
-        <input class="InputNumbersanndOperators"  oninput="SetDefault();" id="yourInputOperator" type="text" value="" />
-		 <input class="InputNumbersanndOperators" id="yourInput2" type="number" value="" /><br>
+        <input class="InputNumbersanndOperators" id="yourInput" type="number" value="" disabled="disabled"/><br>
+        <input class="InputNumbersanndOperators"  oninput="SetDefault();" id="yourInputOperator" type="text" value="" disabled="disabled"/>
+		 <input class="InputNumbersanndOperators" id="yourInput2" type="number" value="" disabled="disabled"/><br>
         <br><br>
         <div id="numbers_and_operators">
-            <input type="number" name="0" value="0" />
+            <input type="number" name="0" value="0" readonly="readonly"/>
             <input type="number" name="1" value="1" />
             <input type="number" name="2" value="2" />
             <input type="number" name="3" value="3" />

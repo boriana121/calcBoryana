@@ -50,6 +50,8 @@ window.onload = function(e) {
             console.log("This is first number: " + GetNumber);
             console.log("Operator" + ifContainsMinus);
             console.log("This is second: "+ GetNumber2);
+               console.log(document.getElementById("Output").innerHTML);
+              console.log(document.getElementById("Output2").innerHTML);
 
 
         }

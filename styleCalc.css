@@ -1,0 +1,9 @@
+body div#numbers_and_operators input {
+	width: 14vw;
+    text-align: center;
+    border: 4px solid #f2eaea;
+    background: #cccc;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
