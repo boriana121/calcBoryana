@@ -3,81 +3,64 @@
 // }
 window.onload = function(e) {
     var x = document.getElementById("numbers_and_operators").children;
-    var i = 0;
+    //var i = 0;
 
+    [].forEach.call(document.getElementById('numbers_and_operators').children, function myFunction(e) {
 
-
-
-    //let chosenButton = x[i].value;
-    // document.getElementById("demo").onclick;
-    // document.x.onclick = function() {
-    //     window.popup('/map/', 300, 300, 'map');
-    //     return false;
-    // };
-
-
-
-
-    // for (var i; i < x.length; i++) {
-    //     let chosenButton = x[i].value;
-    //     console.log(x[i].value)
-    //     chosenButton.onclick = function() {
-    //         this.style.color = "#ff0000";
-    //     }
-    // }
-    [].forEach.call(document.getElementById('numbers_and_operators').children, function(e) {
-        e.onclick = function(itIsNumber, currentOperator) {
-            // this.style.display = "none";
-            //console.log(this.value);
-            
-            let alreadyChosenButton = this.value;
-            //let itIsNumber;// = document.getElementById("yourInput").value = this.value;
-            //let currentOperator;
-            //let repeatingNumber;
-            //let output = itIsNumber + repeatingNumber;
-            // let checkIfoperator;
-            // if (isNaN(alreadyChosenButton) || x < 1 || x > 10) {
-            if (isNaN(alreadyChosenButton) || x < 1 || x > 10) {
+        e.onclick = function(itIsNumber, currentOperator,itIsNumber2) {
+        	var self = this;
+            let outPut = document.getElementById("Output").innerHTML;
+            let alreadyChosenButtonSelf = self;
+            let enteredNumbers = parseInt(itIsNumber);
+            let enteredOperators;
+            let GetNumber;
+            let GetNumber2;
+           // itIsNumber2 = document.getElementById("Output2").innerHTML;
+            let ifContainsMinus = document.getElementById("Output").innerHTML.indexOf("-");
+            if (isNaN(alreadyChosenButtonSelf.value) || x < 1 || x > 10) {
                 console.log("It's operator added");
-                //console.log(this.value);
-                currentOperator = document.getElementById("yourInputOperator").value = this.value;
 
-                
-            } else {
-            	itIsNumber = document.getElementById("yourInput").value += this.value;
-            	let numberWihtOperator = itIsNumber + currentOperator; 
-            	repeatingNumber = this.value + itIsNumber;
+                currentOperator = alreadyChosenButtonSelf.value;
+                enteredOperators = document.getElementById("yourInputOperator").value = currentOperator;
+                document.getElementById("Output").innerHTML += enteredOperators;
+                console.log(enteredOperators);
+               // if (currentOperator) {
+               // 	document.getElementById("yourInput").value = "";
+               // }
+
+
+            } else if(!isNaN(alreadyChosenButtonSelf.value) && ifContainsMinus > 0){
+            	console.log("In");
+            	let itIsNumber2 = document.getElementById("yourInput2").value += self.value;
+                GetNumber2 = parseInt(itIsNumber2);
+                document.getElementById("Output2").innerHTML = GetNumber2;
+                //let numberWihtOperator = itIsNumber + currentOperator;
+                //repeatingNumber = this.value + itIsNumber;
+            	//document.getElementById("Output2").innerHTML = this.value;
+            }else {
+                //itIsNumber += this.valueAsNumber;
+                itIsNumber = document.getElementById("yourInput").value += self.value;
+                GetNumber = parseInt(itIsNumber);
+                document.getElementById("Output").innerHTML = GetNumber;
+                let numberWihtOperator = itIsNumber + currentOperator;
+                repeatingNumber = self.value + itIsNumber;
                 // itIsNumber = document.getElementById("yourInput").value = this.value;
             }
-            //console.log(output);
-            console.log(repeatingNumber);
-            // for (var i = alreadyChosenButton; i < alreadyChosenButton.length; i++) {
-            //     // let chosenButton = x[i].value;
-            //     console.log(alreadyChosenButton.length);
-            //     // chosenButton.onclick = function() {
-            //     //     this.style.color = "#ff0000";
-            //     // }
-            //     return alreadyChosenButton++;
-            // }
-            // alreadyChosenButton++;
-            return (alreadyChosenButton);
+            console.log(GetNumber);
+            console.log("This is first number: " + GetNumber);
+            console.log("Operator" + ifContainsMinus);
+            console.log("This is second: "+ GetNumber2);
+
+
         }
     });
+
+
 }
 
+function SetDefault(e) {
+    console.log("IN!");
+    var x = document.getElementById("yourInputOperator");
+    x.value = x.value.toUpperCase();
 
-// function checkifItsNum() {
-//     var inputElement, text;
-
-//     // Get the value of the input field with id="numb"
-//     x = document.getElementById("yourInput").value;
-
-//     // If x is Not a Number or less than one or greater than 10
-//     if (isNaN(x) || x < 1 || x > 10) {
-//         text = x;
-//     } else {
-//         text = "";
-//     }
-//     document.getElementById("result").innerHTML = text;
-// }
-//getInput();
+}
