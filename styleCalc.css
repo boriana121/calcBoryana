@@ -1,9 +1,32 @@
-body div#numbers_and_operators input {
-	width: 14vw;
+#numbers_and_operators input {
+    width: 79px;
     text-align: center;
-    border: 4px solid #f2eaea;
+    border: 4px solid #d4c3c3;
     background: #cccc;
+    margin: 5px;
 }
+
+#calculator {
+    width: 400px;
+    background: #ede6e6;
+    padding: 25px;
+}
+
+#numbers_and_operators #numbersSection input {
+    border-color: #c7dddd;
+}
+
+#numbers_and_operators>div {
+    display: inline;
+}
+
+#numbers_and_operators #operatorsSection input {
+    width: 87px !important;
+}
+
 input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
+}
+#outputs {
+	background: #afddcb;
 }

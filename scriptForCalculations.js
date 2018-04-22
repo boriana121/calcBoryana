@@ -2,10 +2,10 @@
 // 	document.getElementById("demo").onclick = function() {getInput()};
 // }
 window.onload = function(e) {
-    var x = document.getElementById("numbers_and_operators").children;
+    var x = document.querySelectorAll("#numbersSection, #operatorsSection").children;
     //var i = 0;
 
-    [].forEach.call(document.getElementById('numbers_and_operators').children, function myFunction(e) {
+    [].forEach.call(document.querySelectorAll("#numbersSection, #operatorsSection").children, function myFunction(e) {
 
         e.onclick = function(itIsNumber, currentOperator,itIsNumber2) {
         	var self = this;

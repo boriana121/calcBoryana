@@ -3,37 +3,48 @@
 
 <head>
     <title></title>
-    <style src="styleCalc.css" type"txt/style"></style>
+    <link href="styleCalc.css" rel="stylesheet" type "text/css"></link>
     <script src="scriptForCalculations.js"></script>
 </head>
 
 <body>
     <h1>My Calculator</h1>
-    <div>
-    	<div id="Output" type="text" value=""></div><br>
-    	<div id="Output2" type="text" value=""></div><br>
-        <input class="InputNumbersanndOperators" id="yourInput" type="number" value="" disabled="disabled"/><br>
-        <input class="InputNumbersanndOperators"  oninput="SetDefault();" id="yourInputOperator" type="text" value="" disabled="disabled"/>
-		 <input class="InputNumbersanndOperators" id="yourInput2" type="number" value="" disabled="disabled"/><br>
-        <br><br>
+    <div id="calculator">
+        <div id="outputs">
+            <div id="Output" type="text" value=""></div>
+            <br>
+            <div id="Output2" type="text" value=""></div>
+        </div>
+        <br>
+        <input class="InputNumbersanndOperators" id="yourInput" type="number" value="" disabled="disabled" />
+        <br>
+        <input class="InputNumbersanndOperators" oninput="SetDefault();" id="yourInputOperator" type="text" value="" disabled="disabled" />
+        <input class="InputNumbersanndOperators" id="yourInput2" type="number" value="" disabled="disabled" />
+        <br>
+        <br>
+        <br>
         <div id="numbers_and_operators">
-            <input type="number" name="0" value="0" readonly="readonly"/>
-            <input type="number" name="1" value="1" />
-            <input type="number" name="2" value="2" />
-            <input type="number" name="3" value="3" />
-            <input type="number" name="4" value="4" />
-            <input type="number" name="5" value="5" />
-            <input type="number" name="6" value="6" />
-            <input type="number" name="7" value="7" />
-            <input type="number" name="8" value="8" />
-            <input type="number" name="9" value="9" />
+            <div id="numbersSection">
+                <input type="number" name="0" value="0" readonly="readonly" />
+                <input type="number" name="1" value="1" />
+                <input type="number" name="2" value="2" />
+                <input type="number" name="3" value="3" />
+                <input type="number" name="4" value="4" />
+                <input type="number" name="5" value="5" />
+                <input type="number" name="6" value="6" />
+                <input type="number" name="7" value="7" />
+                <input type="number" name="8" value="8" />
+                <input type="number" name="9" value="9" />
+            </div>
             <!-- Operators -->
-
-            <input type="button" name="+" value="+" />
-            <input type="button" name="-" value="-" />
-            <input type="button" name="/" value="/" />
-            <input type="button" name="*" value="*" />
-            <input type="button" name="=" value="=" />
+            <div id="operatorsSection">
+                <input type="button" name="C" value="C" />
+                <input type="button" name="+" value="+" />
+                <input type="button" name="-" value="-" />
+                <input type="button" name="/" value="/" />
+                <input type="button" name="*" value="*" />
+                <input type="button" name="=" value="=" />
+            </div>
         </div>
     </div>
     <button type="button" onclick="checkifItsNum()">Submit</button>
