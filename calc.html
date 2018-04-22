@@ -18,7 +18,7 @@
         <br>
         <input class="InputNumbersanndOperators" id="yourInput" type="number" value="" disabled="disabled" />
         <br>
-        <input class="InputNumbersanndOperators" oninput="SetDefault();" id="yourInputOperator" type="text" value="" disabled="disabled" />
+        <input class="InputNumbersanndOperators" id="yourInputOperator" type="text" value="" disabled="disabled" />
         <input class="InputNumbersanndOperators" id="yourInput2" type="number" value="" disabled="disabled" />
         <br>
         <br>
@@ -38,17 +38,22 @@
             </div>
             <!-- Operators -->
             <div id="operatorsSection">
-                <input type="button" name="C" value="C" />
                 <input type="button" name="+" value="+" />
                 <input type="button" name="-" value="-" />
                 <input type="button" name="/" value="/" />
                 <input type="button" name="*" value="*" />
-                <input type="button" name="=" value="=" />
+                 <input type="text" name="," value="," />
+                
             </div>
+            <div id="operatorForResult" >
+            	<input type="button" name="=" value="="/>
+            </div>
+            <div id="#eraseTools" >
+            	<input type="button" name="C" value="C" />
+            	<input type="button" name="CE" value="CE" />
+            </div>	
         </div>
     </div>
-    <button type="button" onclick="checkifItsNum()">Submit</button>
-    <div id="result"></div>
 </body>
 
 </html>
