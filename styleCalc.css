@@ -27,6 +27,26 @@
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
 #outputs {
-	background: #afddcb;
+    background: #afddcb;
+    height: 50px;
+}
+
+#outputs {
+    display: none;
+}
+
+.InputNumbersanndOperators {
+    width: 30px;
+    border: none;
+    display: inline-block;
+    float: right;
+    background: transparent;
+}
+
+#screen {
+    margin: 6px;
+    background: #c7dddd;
+    height: 40px;
 }
